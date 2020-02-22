@@ -33,7 +33,7 @@ pipeline {
 		stage('Sonar deploy') {
 			steps {
             sshagent(['cicd']) {
-                 sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@http://34.219.170.214:/usr/share/tomcat/webapps/'
+                 sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@http://34.216.152.221:/usr/share/tomcat/webapps/'
             }
 				}
 			}
